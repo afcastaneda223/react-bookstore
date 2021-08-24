@@ -12,7 +12,7 @@
 
 ## Live-version
 
-[Live Version](https://afcastaneda223.github.io/math-magicians/)
+[Live Version](https://github.com/afcastaneda223/react-bookstore)
 
 
 ## Built With
