@@ -6,7 +6,6 @@
 - Add a book.
 - Remove a selected book.
 
-
 ![screenshot]()
 
 
