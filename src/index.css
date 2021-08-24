@@ -1,0 +1,8 @@
+h3 {
+  color: rgb(42,143,247);
+}
+
+.btn-light:focus {
+  box-shadow: none;
+  border: none;
+}
