@@ -6,3 +6,7 @@ h3 {
   box-shadow: none;
   border: none;
 }
+
+.progress-bar {
+  width: 65%;
+}
