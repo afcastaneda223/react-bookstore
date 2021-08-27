@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBook, getBook } from '../redux/books/books';
 
 function BookList() {
-  const myBookArray = useSelector((state) => state.bookArray);
-
   const dispatch = useDispatch();
+  const fetchApi = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/dtv1KpLO9504v7PYIJl4/books/';
+  useEffect(() => {
+    const apiBooks = async () => {
+      const fetchBook = await fetch(fetchApi);
+      const books = await fetchBook.json();
+      return dispatch(getBook(books));
+    };
+    apiBooks();
+  }, []);
+
+  const myBookArray = useSelector((state) => state.bookArray);
 
   const removeBookBtn = (e) => {
     dispatch(removeBook(e.target));

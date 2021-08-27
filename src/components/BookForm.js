@@ -1,20 +1,15 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState, React } from 'react';
-import { useDispatch, connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
-export const BookForm = () => {
+// API token : Xd7g1r2dpWfaQwOfqQxD
+
+const BookForm = () => {
   const [inputText, setInputText] = useState({
     title: '',
     author: '',
   });
-
-  const onChange = (e) => {
-    setInputText({
-      ...inputText,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const dispatch = useDispatch();
 
@@ -32,6 +27,13 @@ export const BookForm = () => {
         author: '',
       });
     }
+  };
+
+  const onChange = (e) => {
+    setInputText({
+      ...inputText,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -65,10 +67,4 @@ export const BookForm = () => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  title: state.title,
-  author: state.author,
-  id: state.id,
-});
-
-export default connect(mapStateToProps)(BookForm);
+export default BookForm;
