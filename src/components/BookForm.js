@@ -3,8 +3,6 @@ import { useState, React } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
-// API token : Xd7g1r2dpWfaQwOfqQxD
-
 const BookForm = () => {
   const [inputText, setInputText] = useState({
     title: '',
