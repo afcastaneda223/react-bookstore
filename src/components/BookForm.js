@@ -1,20 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState, React } from 'react';
-import { useDispatch, connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
-export const BookForm = () => {
+const BookForm = () => {
   const [inputText, setInputText] = useState({
     title: '',
     author: '',
+    category: 'Fiction',
   });
-
-  const onChange = (e) => {
-    setInputText({
-      ...inputText,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const dispatch = useDispatch();
 
@@ -24,6 +18,7 @@ export const BookForm = () => {
       id: uuidv4(),
       title: inputText.title,
       author: inputText.author,
+      category: inputText.category,
     };
     if (inputText.title.trim() && inputText.author.trim()) {
       dispatch(addBook(newBook));
@@ -34,9 +29,16 @@ export const BookForm = () => {
     }
   };
 
+  const onChange = (e) => {
+    setInputText({
+      ...inputText,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <form onSubmit={submitBookToStore} className="row my-5">
-      <div className="col-5">
+      <div className="col-4">
         <input
           type="text"
           className="form-control"
@@ -47,7 +49,7 @@ export const BookForm = () => {
           required
         />
       </div>
-      <div className="col-5">
+      <div className="col-3">
         <input
           type="text"
           className="form-control"
@@ -58,6 +60,13 @@ export const BookForm = () => {
           required
         />
       </div>
+      <div className="col-3">
+        <select name="category" className="form-select" id="category" value={inputText.category} onChange={onChange}>
+          <option value="Fiction">Fiction</option>
+          <option value="Horror">Horror</option>
+          <option value="Adventure">Adventure</option>
+        </select>
+      </div>
       <div className="col-2">
         <button type="submit" className="btn btn-primary">Add Book</button>
       </div>
@@ -65,10 +74,4 @@ export const BookForm = () => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  title: state.title,
-  author: state.author,
-  id: state.id,
-});
-
-export default connect(mapStateToProps)(BookForm);
+export default BookForm;
