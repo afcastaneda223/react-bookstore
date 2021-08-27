@@ -1,5 +1,5 @@
 body {
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
 }
 
 h3 {
@@ -16,19 +16,19 @@ h3 {
 }
 
 .navbar {
-  background-color: #FFFFFF;
+  background-color: #fff;
 }
 
 .btn-light {
-  background-color: #FFFFFF;
-  border-color: #FFFFFF;;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .btn-light:focus {
-  background-color: #FFFFFF;
-  border-color: #FFFFFF;;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .mainContainer {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
