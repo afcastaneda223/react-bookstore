@@ -6,11 +6,6 @@ h3 {
   color: rgb(42, 143, 247);
 }
 
-.btn-light:focus {
-  box-shadow: none;
-  border: none;
-}
-
 .progress-bar {
   width: 65%;
 }
@@ -27,6 +22,8 @@ h3 {
 .btn-light:focus {
   background-color: #fff;
   border-color: #fff;
+  box-shadow: none;
+  border: none;
 }
 
 .mainContainer {
