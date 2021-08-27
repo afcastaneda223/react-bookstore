@@ -9,6 +9,7 @@ const BookForm = () => {
   const [inputText, setInputText] = useState({
     title: '',
     author: '',
+    category: 'Fiction',
   });
 
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const BookForm = () => {
       id: uuidv4(),
       title: inputText.title,
       author: inputText.author,
+      category: inputText.category,
     };
     if (inputText.title.trim() && inputText.author.trim()) {
       dispatch(addBook(newBook));
@@ -38,7 +40,7 @@ const BookForm = () => {
 
   return (
     <form onSubmit={submitBookToStore} className="row my-5">
-      <div className="col-5">
+      <div className="col-4">
         <input
           type="text"
           className="form-control"
@@ -49,7 +51,7 @@ const BookForm = () => {
           required
         />
       </div>
-      <div className="col-5">
+      <div className="col-3">
         <input
           type="text"
           className="form-control"
@@ -59,6 +61,13 @@ const BookForm = () => {
           onChange={onChange}
           required
         />
+      </div>
+      <div className="col-3">
+        <select name="category" className="form-select" id="category" value={inputText.category} onChange={onChange}>
+          <option value="Fiction">Fiction</option>
+          <option value="Horror">Horror</option>
+          <option value="Adventure">Adventure</option>
+        </select>
       </div>
       <div className="col-2">
         <button type="submit" className="btn btn-primary">Add Book</button>

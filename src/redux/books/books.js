@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
         body: JSON.stringify({
           item_id: action.payload.id,
           title: action.payload.title,
-          category: 'Fiction',
+          category: action.payload.category,
         }),
         headers: {
           'Content-Type': 'application/json',

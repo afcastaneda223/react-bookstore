@@ -35,7 +35,7 @@ function BookList() {
                       <p>Author: </p>
                     </div>
                     <div className="col-9">
-                      <p>Fiction</p>
+                      <p>{book.category}</p>
                       <p>{book.title}</p>
                       <p>{book.author}</p>
                     </div>
