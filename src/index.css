@@ -6,6 +6,10 @@ body {
   color: rgb(42, 143, 247);
 }
 
+h3 {
+  color: rgb(42, 143, 247);
+}
+
 .progress-bar {
   width: 65%;
 }
@@ -20,6 +24,13 @@ body {
 }
 
 .btn-light:focus {
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: none;
+  border: none;
+}
+
+.btn-light:hover {
   background-color: #fff;
   border-color: #fff;
   box-shadow: none;
