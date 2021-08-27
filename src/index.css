@@ -1,3 +1,7 @@
+body {
+  background-color: #F5F6FA;
+}
+
 h3 {
   color: rgb(42, 143, 247);
 }
@@ -9,4 +13,22 @@ h3 {
 
 .progress-bar {
   width: 65%;
+}
+
+.navbar {
+  background-color: #FFFFFF;
+}
+
+.btn-light {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;;
+}
+
+.btn-light:focus {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;;
+}
+
+.mainContainer {
+  background-color: #FAFAFA;
 }

@@ -16,21 +16,23 @@ import store from './redux/configureStore';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <Navbar />
-        <div className="container">
-          <Switch>
-            <Route exact path="/">
-              <Books />
-            </Route>
-            <Route path="/Category">
-              <Category />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </Provider>
+    <div className="row m-5 mainContainer rounded shadow-lg">
+      <Provider store={store}>
+        <Router>
+          <Navbar />
+          <div className="col">
+            <Switch>
+              <Route exact path="/">
+                <Books />
+              </Route>
+              <Route path="/Category">
+                <Category />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
+    </div>
   </React.StrictMode>,
   document.getElementById('root'),
 );

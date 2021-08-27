@@ -6,7 +6,6 @@ import { addBook } from '../redux/books/books';
 const BookForm = () => {
   const [inputText, setInputText] = useState({
     title: '',
-    author: '',
     category: 'Fiction',
   });
 
@@ -17,14 +16,12 @@ const BookForm = () => {
     const newBook = {
       id: uuidv4(),
       title: inputText.title,
-      author: inputText.author,
       category: inputText.category,
     };
-    if (inputText.title.trim() && inputText.author.trim()) {
+    if (inputText.title.trim()) {
       dispatch(addBook(newBook));
       setInputText({
         title: '',
-        author: '',
       });
     }
   };
@@ -37,8 +34,8 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={submitBookToStore} className="row my-5">
-      <div className="col-4">
+    <form onSubmit={submitBookToStore} className="row my-5 ps-5">
+      <div className="col-6">
         <input
           type="text"
           className="form-control"
@@ -49,18 +46,7 @@ const BookForm = () => {
           required
         />
       </div>
-      <div className="col-3">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Book Author"
-          value={inputText.author}
-          name="author"
-          onChange={onChange}
-          required
-        />
-      </div>
-      <div className="col-3">
+      <div className="col-4">
         <select name="category" className="form-select" id="category" value={inputText.category} onChange={onChange}>
           <option value="Fiction">Fiction</option>
           <option value="Horror">Horror</option>
