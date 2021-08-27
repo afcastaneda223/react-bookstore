@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light mb-5 sticky-top">
       <div className="container-fluid">
-        <Link to="/"><button type="button" className="btn btn-light"><h3>Bookstore CMS</h3></button></Link>
+        <Link to="/"><button type="button" className="btn btn-light blue"><h3>Bookstore CMS</h3></button></Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,10 +20,10 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 pe-5">
             <li className="nav-item m-2">
-              <Link to="/"><button type="button" className="btn btn-light"><p>BOOKS</p></button></Link>
+              <Link to="/"><button type="button" className="btn btn-light mt-1 text-muted fw-bold"><p>BOOKS</p></button></Link>
             </li>
             <li className="nav-item m-2">
-              <Link to="/category"><button type="button" className="btn btn-light"><p>CATEGORIES</p></button></Link>
+              <Link to="/category"><button type="button" className="btn btn-light mt-1 text-muted"><p>CATEGORIES</p></button></Link>
             </li>
           </ul>
         </div>
