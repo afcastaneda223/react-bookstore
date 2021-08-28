@@ -6,7 +6,7 @@
 - Add a book.
 - Remove a selected book.
 
-![screenshot]()
+![screenshot](bookstore.png)
 
 
 ## Live-version

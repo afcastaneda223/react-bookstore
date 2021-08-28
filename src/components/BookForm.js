@@ -6,7 +6,6 @@ import { addBook } from '../redux/books/books';
 const BookForm = () => {
   const [inputText, setInputText] = useState({
     title: '',
-    author: '',
     category: 'Fiction',
   });
 
@@ -17,14 +16,12 @@ const BookForm = () => {
     const newBook = {
       id: uuidv4(),
       title: inputText.title,
-      author: inputText.author,
       category: inputText.category,
     };
-    if (inputText.title.trim() && inputText.author.trim()) {
+    if (inputText.title.trim()) {
       dispatch(addBook(newBook));
       setInputText({
         title: '',
-        author: '',
       });
     }
   };
@@ -37,38 +34,30 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={submitBookToStore} className="row my-5">
-      <div className="col-4">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Book title"
-          value={inputText.title}
-          name="title"
-          onChange={onChange}
-          required
-        />
-      </div>
-      <div className="col-3">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Book Author"
-          value={inputText.author}
-          name="author"
-          onChange={onChange}
-          required
-        />
-      </div>
-      <div className="col-3">
-        <select name="category" className="form-select" id="category" value={inputText.category} onChange={onChange}>
-          <option value="Fiction">Fiction</option>
-          <option value="Horror">Horror</option>
-          <option value="Adventure">Adventure</option>
-        </select>
-      </div>
-      <div className="col-2">
-        <button type="submit" className="btn btn-primary">Add Book</button>
+    <form onSubmit={submitBookToStore} className="my-5">
+      <h5 className="text-muted">ADD NEW BOOK</h5>
+      <div className="row row-lg-cols-3 text-center">
+        <div className="col-lg-6">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Book title"
+            value={inputText.title}
+            name="title"
+            onChange={onChange}
+            required
+          />
+        </div>
+        <div className="col-lg-4">
+          <select name="category" className="form-select" id="category" value={inputText.category} onChange={onChange}>
+            <option value="Fiction">Fiction</option>
+            <option value="Horror">Horror</option>
+            <option value="Adventure">Adventure</option>
+          </select>
+        </div>
+        <div className="col-lg-2">
+          <button type="submit" className="btn btn-primary px-5">Add Book</button>
+        </div>
       </div>
     </form>
   );

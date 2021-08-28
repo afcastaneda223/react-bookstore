@@ -1,12 +1,42 @@
+body {
+  background-color: #f5f6fa;
+}
+
+.blue {
+  color: rgb(42, 143, 247);
+}
+
 h3 {
   color: rgb(42, 143, 247);
 }
 
+.progress-bar {
+  width: 65%;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.btn-light {
+  background-color: #fff;
+  border-color: #fff;
+}
+
 .btn-light:focus {
+  background-color: #fff;
+  border-color: #fff;
   box-shadow: none;
   border: none;
 }
 
-.progress-bar {
-  width: 65%;
+.btn-light:hover {
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: none;
+  border: none;
+}
+
+.mainContainer {
+  background-color: #fafafa;
 }
