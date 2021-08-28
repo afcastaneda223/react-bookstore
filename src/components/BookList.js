@@ -44,10 +44,11 @@ function BookList() {
                 </div>
               </div>
               <div className="col-md-4 px-5 my-3">
-                <div className="progress mt-5">
+                <h4>65%</h4>
+                <p>Completed</p>
+                <div className="progress">
                   <div className="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                    {NumberDictionary.generate({ min: 1, max: 10 }) * 10}
-                    %
+                    65%
                   </div>
                 </div>
               </div>
