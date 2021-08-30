@@ -1,22 +1,21 @@
-# Bookstore
+# Space Travelers' Hub
 
-> The Bookstore is a MVP version of it that allows you to:
+> The Space Travelers' Hub is a MVP version of it that allows you to:
 
-- Display a list of books.
-- Add a book.
-- Remove a selected book.
+- Book rockets
+- Join selected space missions
 
-![screenshot](bookstore.png)
+![screenshot]()
 
 
 ## Live-version
 
-[Live Version](https://github.com/afcastaneda223/react-bookstore)
+[Live Version](https://github.com/afcastaneda223/space-travelers)
 
 
 ## Built With
 
-- React + Javascript
+- React + Javascript + Redux
 
 ## Getting Started
 
@@ -42,12 +41,17 @@
    ```
 
 
-## Author
+## Authors
 
 👤 **Andres Felipe Castañeda Ramos**
 - Github: [@afcastaneda223](https://github.com/afcastaneda223)
 - Twitter: [@afcastaneda](https://twitter.com/afcastaneda)
 - Linkedin: [Andres Felipe Castañeda](www.linkedin.com/in/andres-castaneda223)
+
+👤 **Arturo Alvarez**
+- Github: [@StarSheriff2](https://github.com/StarSheriff2)
+- Twitter: [@ArturoAlvarezV](https://twitter.com/ArturoAlvarezV)
+- Linkedin: [Arturo Alvarez](https://www.linkedin.com/in/arturoalvarezv/)
 
 
 ## 🤝 Contributing
